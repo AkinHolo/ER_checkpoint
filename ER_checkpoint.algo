@@ -1,0 +1,116 @@
+/* Gymnasiums collection */
+db.gymnasium.insertMany([
+    {
+        "_id": ("101245"),
+        "name": "Lagos Sport Centre,Rowe Park",
+        "address": "F9WJ+QCC, Herbert Macaulay",
+        "phone": "+234 000 000 0000"
+    },
+    {
+        
+        "_id": ("101241"),
+        "name": "Lagos Sport Centre,Teslim Balogun Stadium",
+        "address": "F9X6+W9V, Alh. Masha Rd, Surulere ",
+        "phone": "+234 111 111 1111"   
+    },
+])
+
+
+/* Members Collection*/
+db.member.insertMany([
+    {
+        "_id": ("01234"),
+        "lastName": "John",
+        "firstName": "Conor",
+        "address": "queen street",
+        "birthdate": ("01-02-1985"),
+        "gender": "male",
+        "gymnasium": ("101245")
+    },
+    {
+         "_id": ("56789"),
+        "lastName": "Lana",
+        "firstName": "Lang",
+        "address": "northeast street",
+        "birthdate": ("03-04-1990"),
+        "gender": "female",
+        "gymnasium": ("101241")
+    }
+])
+
+
+// Coaches Collectio 
+db.coach.insertMany([
+    {
+        "_id": ("abcde")
+        "lastName": "Bruce",
+        "firstName": "Lee",
+        "age": "40",
+        "speciality": "Martial act",
+        "gymnasium": ("101245")
+    },
+    {
+        "_id": ("zywvu")
+        "lastName": "Captain",
+        "firstName": "Buster",
+        "age": "40",
+        "speciality": "weightlighting",
+        "gymnasium": ("101241") 
+    }
+])
+
+
+// Sport Collection
+db.sport.insertMany([
+    {
+        "_id": ("00000")
+        "name": "combat",
+        "gymnasium": ("101245")
+    },
+    {
+          "_id": ("11111")
+        "name": "Body builder",
+        "gymnasium": ("101245")
+    }
+])
+
+
+// Session Collection
+db.session.insertMany([
+
+    {
+        "_id": ("a0b1c2d3e4"),
+        "sport": ("00000"),
+        "schedule": ("00000abcde"),
+        "maxMember": "20"
+    },
+    {
+         "_id": ("z9y8x7v6u5"),
+        "sport": ("11111"),
+        "schedule": ("11111zyxwv")
+        "maxMember": "20"
+    }
+])
+
+
+// Schedule Collection
+db.schedule.insert.Many([
+    {
+        "_id": ("00000abcde"),
+        "dayOfWeek": "Wednesday",
+        "startTime": "6pm",
+        "endTime": "9pm",
+        "sport": ("00000"),
+         "gymnasium": ("101245"),
+         "coach": [("abcde")]
+    },
+    {
+        "_id": ("11111zyxwv"),
+        "dayOfWeek": "Saturday",
+        "startTime": "9am",
+        "endTime": "12pm",
+         "sport": ("11111"),
+         "gymnasium": ("101241"),
+         "coach": [("zyxwv")]
+    }
+])
